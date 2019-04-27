@@ -1,18 +1,32 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+	<ul class="list-group">
+		<router-link tag="li" class="list-group-item" :to="`/movie/${movie.episode_id}`" v-for="movie in movies" :key="movie.url">
+			<a class="list-group--link" v-text="`Episode ${movie.episode_id} - ${movie.title}`"></a>
+		</router-link>
+	</ul>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+	const axios = require('axios');
 export default {
   name: 'home',
-  components: {
-    HelloWorld
+  data() {
+  	return {
+  		movies: []
+  	}
+  },
+  methods: {
+  	fetch() {
+  		this.movies = [];
+  		axios.get('https://swapi.co/api/films')
+  			.then( ({ data }) => {
+  				console.log(data)
+  				this.movies = data.results
+  			})
+  	}
+  },
+  created() {
+  	this.fetch();
   }
 }
 </script>
