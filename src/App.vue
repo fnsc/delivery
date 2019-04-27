@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="row mt-5 justify-content-center">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <router-view></router-view>
             </div>
         </div>
@@ -30,7 +30,9 @@
     background-image: url('./assets/background.png');
     background-size: cover;
     background-position: top;
+    width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 .navbar {
     &--list {

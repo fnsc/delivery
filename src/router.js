@@ -21,10 +21,9 @@ export default new Router({
             // component: () => import('./views/Movie.vue'),
             children: [
                 {
-                    path: ":url",
+                    path: ":id",
                     component: MovieInfo,
                     beforeEnter: (to, from, next) => {
-                        console.log("inside route setup");
                         next();
                     }
                 },
