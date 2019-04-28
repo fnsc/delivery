@@ -65,31 +65,7 @@
 					</div>
 					<div class="row mt-3" v-if="results.length">
 						<div class="col-lg-12">
-							<table class="table table-dark">
-								<thead>
-									<tr>
-										<th
-											scope="col"
-											v-for="(value, prop) in results[0]"
-											v-text="
-												prop
-													.replace('_', ' ')
-													.toUpperCase()
-											"
-											v-if="!checkField(value, prop)"
-										></th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr v-for="result in results">
-										<td
-											v-for="(value, prop) in result"
-											v-text="value"
-											v-if="!checkField(value, prop)"
-										></td>
-									</tr>
-								</tbody>
-							</table>
+							<data-list :results="results"></data-list>
 						</div>
 						<div class="col-lg-12">
 							<paginator
@@ -106,10 +82,12 @@
 <script>
 const axios = require("axios");
 const swal = require("sweetalert");
+import DataList from '../components/Table';
 import Paginator from "../components/Paginator";
 export default {
 	components: {
-		Paginator
+		Paginator,
+		DataList
 	},
 	data() {
 		return {
@@ -181,15 +159,6 @@ export default {
 				return true;
 			}
 			return false;
-		},
-		checkField(value, prop) {
-			if (Array.isArray(value)) {
-				return true;
-			} else if (prop == "created" || prop == "edited" || prop == "url") {
-				return true;
-			} else if (value.includes("https:")) {
-				return true;
-			}
 		},
 		loadNewPage($event) {
 			this.results = [];
