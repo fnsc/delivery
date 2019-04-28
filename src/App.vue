@@ -1,68 +1,37 @@
 <template>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row d-flex">
             <div class="col-lg-12">
-                <nav class="navbar justify-content-center">
-                    <ul class="navbar--list">
-                        <router-link tag="li" class="navbar--item" to='/' active-class='active' exact><a class="navbar--link">Home</a></router-link>
-                    </ul>
-                </nav>
+                <!-- <nav class="navbar justify-content-center">
+                    <ul class="navbar--list"> -->
+                        <navbar></navbar>
+                    <!-- </ul>
+                </nav> -->
             </div>
         </div>
-        <div class="row mt-4">
-            <div class="col-lg-12">
-                <img src="./assets/star_wars_logo.png" alt="" class="mx-auto d-block">
-            </div>
-        </div>
-        <div class="row mt-5 justify-content-center">
-            <div class="col-lg-12">
-                <router-view></router-view>
-            </div>
-        </div>
+        <router-view></router-view>
     </div>
 </template>
+<script>
+import Navbar from "./components/Navbar";
+
+export default {
+    components: { Navbar }
+};
+</script>
 
 <style lang="scss">
-.container-fluid {
-    font-family: 'Roboto', sans-serif;
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-image: url('./assets/background.png');
+    background-color: #373737;
     background-size: cover;
     background-position: top;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-}
-.navbar {
-    &--list {
-        list-style-type: none;
-        margin: 0;
-        padding: 10px;
-
-    }
-    &--item {
-        display: inline;
-        &:not(:last-child) {
-            margin-right: 35px;
-        }
-    }
-    &--link {
-        &:visited, &:link {
-            color: #f1f1f1;
-            font-weight: bold;
-            text-decoration: none;
-            text-transform: uppercase;
-            transition: all .2s;
-            text-decoration: none;
-        }
-        &:hover, &:active {
-            color: #edec51;
-            text-decoration: none;
-        }
-    }
-}
-.active {
-    color: #edec51;
+    // width: 100vw;
+    // min-height: 100vh;
 }
 </style>
