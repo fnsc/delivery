@@ -2,11 +2,7 @@
     <div class="container">
         <div class="row d-flex">
             <div class="col-lg-12">
-                <!-- <nav class="navbar justify-content-center">
-                    <ul class="navbar--list"> -->
-                        <navbar></navbar>
-                    <!-- </ul>
-                </nav> -->
+                <navbar></navbar>
             </div>
         </div>
         <router-view></router-view>
