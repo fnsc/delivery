@@ -5,7 +5,7 @@
 npm install
 ```
 
-## Assets Build
+### Assets Build
 ```
 npm run build
 ```
@@ -13,4 +13,9 @@ npm run build
 ### Compiles and hot-reloads for development
 ```
 npm run serve
+```
+
+### Visit
+```
+http://localhost:8081/
 ```
