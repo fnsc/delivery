@@ -12,6 +12,7 @@
                     <button
                         class="navbar-toggler"
                         type="button"
+                        id="menuButton"
                         data-toggle="collapse"
                         data-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent"
@@ -31,6 +32,7 @@
                                 v-for="movie in movies"
                                 :key="movie.url"
                                 class="nav-item"
+                                @click.native="toggleMenu"
                             >
                                 <a
                                     class="nav-link"
@@ -38,7 +40,7 @@
                                 ></a>
                             </router-link>
                             <router-link tag="li" to="/search" class="nav-item"
-                                ><a class="nav-link">Procura</a></router-link
+                                @click.native="toggleMenu"><a class="nav-link">Pesquisa</a></router-link
                             >
                         </ul>
                     </div>
@@ -63,10 +65,13 @@ export default {
             axios
                 .get("https://swapi.co/api/films")
                 .then(({ data }) => {
-                    console.log(data);
                     this.movies = data.results;
                 })
                 .catch(error => console.error(error));
+        },
+        toggleMenu(){
+            let btn = document.querySelector('#menuButton');
+            if (! btn.classList.contains('collapsed')) btn.click();
         }
     },
     created() {
@@ -75,9 +80,6 @@ export default {
 };
 </script>
 <style lang="scss">
-li a {
-}
-
 .image {
     height: 30px;
 }
