@@ -3,7 +3,7 @@
         <div class="row d-flex">
             <div class="col-lg-12">
                 <nav class="navbar navbar-expand-lg navbar-dark">
-                    <router-link to="/" class="navbar-brand"
+                    <router-link to="/" class="navbar-brand" @click.native="toggleMenu"
                         ><img
                             src="../assets/star_wars_logo.png"
                             alt="Star Wars Logo"
