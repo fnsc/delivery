@@ -40,17 +40,17 @@
 				</div>
 			</div> -->
 		</div>
-		<div class="row" v-if="loading">
-			<div class="col-lg-12 ">
-				<img src="../assets/loading.gif" alt="loading" class="mx-auto d-block">
-			</div>
-		</div>
+		<loading v-if="loading"></loading>
 	</section>
 </template>
 <script>
 	const axios = require("axios");
 	const moment = require('moment');
+	import Loading from './Loading';
 	export default {
+		components: {
+			Loading
+		},
 		data() {
 			return {
 				movie: {},
