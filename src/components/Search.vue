@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="container">
 		<div class="row mt-5">
 			<div class="col-lg-12">
 				<div class="card text-white bg-secondary mb-3">
@@ -89,9 +89,9 @@
 <script>
 const axios = require("axios");
 const swal = require("sweetalert");
-import DataList from "../components/Table";
-import Paginator from "../components/Paginator";
-import Loading from "../components/Loading";
+import DataList from "./Table";
+import Paginator from "./Paginator";
+import Loading from "./Loading";
 export default {
 	components: {
 		Paginator,

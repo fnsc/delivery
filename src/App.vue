@@ -1,10 +1,6 @@
 <template>
-    <div class="container">
-        <div class="row d-flex">
-            <div class="col-lg-12">
-                <navbar></navbar>
-            </div>
-        </div>
+    <div class="container-fluid">
+        <navbar></navbar>
         <router-view></router-view>
         <footer-component></footer-component>
     </div>
@@ -31,8 +27,5 @@ body {
     background-position: top;
     // width: 100vw;
     // min-height: 100vh;
-}
-router-view {
-    min-height: 95vh;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-	<section class="content mt-5" v-cloak>
+	<section class="container content mt-5" v-cloak>
 		<div v-if="! loading">
 			<div class="row justify-content-center">
 				<div class="col-lg-8">

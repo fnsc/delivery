@@ -1,8 +1,9 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Search from "./views/Search.vue";
+import Search from "./components/Search.vue";
 import Movie from "./views/Movie.vue";
 import MovieInfo from "./components/MovieInfo.vue";
+import Home from "./components/Home.vue";
 
 Vue.use(Router);
 
@@ -13,7 +14,7 @@ export default new Router({
         {
             path: "/",
             name: "home",
-            // component: Home
+            component: Home
         },
         {
             path: "/movie",
