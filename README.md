@@ -14,8 +14,3 @@ npm run build
 ```
 npm run serve
 ```
-
-### Visit
-```
-http://localhost:8081/
-```
