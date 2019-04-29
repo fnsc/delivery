@@ -28,6 +28,7 @@
                 >
                     <a class="nav-link" v-text="`Episode ${movie.episode_id}`"></a>
                 </router-link>
+                <router-link tag="li" to="/search" class="nav-item"><a class="nav-link">Procura</a></router-link>
             </ul>
         </div>
     </nav>

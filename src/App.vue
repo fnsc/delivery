@@ -6,13 +6,15 @@
             </div>
         </div>
         <router-view></router-view>
+        <footer-component></footer-component>
     </div>
 </template>
 <script>
 import Navbar from "./components/Navbar";
+import FooterComponent from "./components/Footer";
 
 export default {
-    components: { Navbar }
+    components: { Navbar, FooterComponent }
 };
 </script>
 
@@ -29,5 +31,8 @@ body {
     background-position: top;
     // width: 100vw;
     // min-height: 100vh;
+}
+router-view {
+    min-height: 95vh;
 }
 </style>
