@@ -25,7 +25,5 @@ body {
     background-color: #373737;
     background-size: cover;
     background-position: top;
-    // width: 100vw;
-    // min-height: 100vh;
 }
 </style>

@@ -26,7 +26,7 @@ export default new Router({
                     beforeEnter: (to, from, next) => {
                         next();
                     }
-                },
+                }
             ]
         },
         {
@@ -35,8 +35,8 @@ export default new Router({
             component: Search
         },
         {
-            path: '*',
-            redirect: '/'
+            path: "*",
+            redirect: "/"
         }
     ]
 });

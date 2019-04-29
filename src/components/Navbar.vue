@@ -39,8 +39,12 @@
                                     v-text="`Episode ${movie.episode_id}`"
                                 ></a>
                             </router-link>
-                            <router-link tag="li" to="/search" class="nav-item"
-                                @click.native="toggleMenu"><a class="nav-link">Pesquisa</a></router-link
+                            <router-link
+                                tag="li"
+                                to="/search"
+                                class="nav-item"
+                                @click.native="toggleMenu"
+                                ><a class="nav-link">Pesquisa</a></router-link
                             >
                         </ul>
                     </div>
@@ -69,9 +73,9 @@ export default {
                 })
                 .catch(error => console.error(error));
         },
-        toggleMenu(){
-            let btn = document.querySelector('#menuButton');
-            if (! btn.classList.contains('collapsed')) btn.click();
+        toggleMenu() {
+            let btn = document.querySelector("#menuButton");
+            if (!btn.classList.contains("collapsed")) btn.click();
         }
     },
     created() {
