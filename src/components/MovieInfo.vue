@@ -87,7 +87,6 @@ export default {
 			axios
 				.get(`https://swapi.co/api/films/${this.getCorrectId()}`)
 				.then(({ data }) => {
-					console.log(data);
 					this.movie = data;
 					this.loading = false;
 				});

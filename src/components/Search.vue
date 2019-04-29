@@ -124,7 +124,6 @@ export default {
 					`https://swapi.co/api/${this.search}?search=${this.params}`
 				)
 				.then(({ data }) => {
-					console.log(data);
 					if (!data.results.length) {
 						swal(
 							"Ops... 😭",
